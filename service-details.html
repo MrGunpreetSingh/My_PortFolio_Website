@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Gunpreet Singh - Quality Engineer</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+    #navmenu {
+      width: 250px;
+      height: 100vh;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: #222;
+      padding: 20px;
+      color: white;
+    }
+    #navmenu ul {
+      list-style: none;
+      padding: 0;
+    }
+    #navmenu ul li {
+      margin: 20px 0;
+    }
+    #navmenu ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+    #navmenu ul li a i {
+      margin-right: 10px;
+    }
+    .main-container {
+      margin-left: 270px;
+      width: calc(100% - 270px);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .profile-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    @media (max-width: 1024px) {
+      body {
+        flex-direction: column;
+      }
+      #navmenu {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+      }
+      #navmenu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #navmenu ul li {
+        margin: 10px 15px;
+      }
+      .main-container {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="navmenu" class="navmenu">
+    <div class="profile-img text-center mb-3">
+      <img src="assets/img/my-profile-img.jpg" alt="Gunpreet Singh" class="img-fluid rounded-circle" width="150">
+    </div>
+    <ul>
+      <li><a href="index.html"><i class="bi bi-house"></i> Home</a></li>
+      <li><a href="portfolio-details.html"><i class="bi bi-images"></i> Portfolio</a></li>
+      <li><a href="#education"><i class="bi bi-mortarboard"></i> Education</a></li>
+      <li><a href="#work-experience"><i class="bi bi-briefcase"></i> Work Experience</a></li>
+      <li><a href="#skills"><i class="bi bi-gear"></i> Skills</a></li>
+      <li><a href="#contact"><i class="bi bi-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-container">
+    
+
+    <section id="education" class="section" style="display: none;">
+      <h2>🎓 Education</h2>
+      <p><strong>University of New Brunswick</strong> - Bachelor of Computer Science (2025)</p>
+      <p>Relevant Courses: Software Testing, Machine Learning, Data Structures</p>
+    </section>
+
+    <section id="work-experience" class="section" style="display: none;">
+      <h2>💼 Work Experience</h2>
+      <p><strong>Your Job Title</strong> - Your Company</p>
+      <p>• Your job responsibilities and experience details</p>
+    </section>
+
+    <script>
+      document.querySelectorAll('#navmenu a').forEach(link => {
+        link.addEventListener('click', function(event) {
+          if (this.getAttribute('href').startsWith('#')) {
+            event.preventDefault();
+            document.querySelectorAll('.section').forEach(section => {
+              section.style.display = 'none';
+            });
+            const targetSection = document.querySelector(this.getAttribute('href'));
+            if (targetSection) {
+              targetSection.style.display = 'block';
+            }
+          }
+        });
+      });
+    </script>
+  </div>
+
+  <footer id="footer" class="footer text-center mt-4 p-2 w-100" style="position: fixed; bottom: 0; left: 0; width: 100%; font-size: 14px; background: #f8f9fa; padding: 10px;">
+    <p>&copy; 2025 Gunpreet Singh. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+
