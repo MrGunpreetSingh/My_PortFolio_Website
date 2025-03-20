@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,84 +26,319 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
-<body>
+<body class="index-page">
+
   <header id="header" class="header dark-background d-flex flex-column">
     <i class="header-toggle d-xl-none bi bi-list"></i>
+
     <div class="profile-img">
       <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
     </div>
+
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <h1 class="sitename">Gunpreet Singh</h1>
     </a>
+
     <p>Final Year BCS Student | Co-Op | PEP Student</p>
     <p>University of New Brunswick, Fredericton, NB</p>
     <p>Self-motivated, final-year student with strong knowledge of various programming languages, software, and platforms.</p>
+
+    <div class="social-links text-center">
+      <a href="https://www.linkedin.com/in/gunpreet-singh-/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/MrGunpreetSingh" class="github"><i class="bi bi-github"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#skills"><i class="bi bi-tools navicon"></i> Skills</a></li>
+        <li><a href="#education"><i class="bi bi-mortarboard navicon"></i> Education</a></li>
+        <li><a href="#experience"><i class="bi bi-briefcase navicon"></i> Experience</a></li>
+        <li><a href="#projects"><i class="bi bi-file-earmark-code navicon"></i> Projects</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
   </header>
 
-  <main class="main container">
-    <section id="skills" class="section">
-      <h3>Skills</h3>
-      <ul>
-        <li>Strategic Problem-Solver</li>
-        <li>Agile Learner</li>
-        <li>Team Collaboration</li>
-        <li>Dynamic Presenter</li>
-      </ul>
-      <h4>Programming Languages</h4>
-      <p>Java, Python, JavaScript, HTML, SQL, MATLAB, C++, C#</p>
-      <h4>Technical Tools</h4>
-      <p>Power BI, Data Structures and Algorithms, Database Management, Machine Learning, Microsoft Excel</p>
-      <h4>Operating Systems</h4>
-      <p>Windows, MacOS, Linux</p>
-    </section>
+  <main class="main">
 
-    <section id="projects" class="section">
-      <h3>Projects</h3>
-      <h4>Personal Portfolio Website</h4>
-      <p>Designed and developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
-      <ul>
-        <li>Created a clean and user-friendly interface.</li>
-        <li>Ensured responsive design across devices.</li>
-        <li>Optimized website performance.</li>
-      </ul>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
 
-      <h4>Family Financial Tracking System</h4>
-      <p>Led a team to build a Family Financial Tracking System using Eclipse, C, and Java. Features include expense categorization and budget management.</p>
-      <ul>
-        <li>Developed real-time data analysis tools.</li>
-        <li>Integrated interactive financial reports.</li>
-      </ul>
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
 
-      <h4>Flying Jet Game</h4>
-      <p>Developed a 2D flying jet game using JavaScript and the HTML5 Canvas API. The game features smooth animations and real-time collision detection.</p>
-      <ul>
-        <li>Implemented score management and difficulty levels.</li>
-        <li>Conducted usability testing for cross-device playability.</li>
-      </ul>
-    </section>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Gunpreet Singh</h2>
+        <p>I'm <span class="typed" data-typed-items="a BCS Student, a Programmer, a Problem Solver">a BCS Student</span></p>
+      </div>
 
-    <section id="contact" class="section">
-      <h3>Contact</h3>
-      <p>Email: Q3y4a@unb.ca</p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/gunpreet-singh">linkedin.com/in/gunpreet-singh</a></p>
-      <p>GitHub: <a href="https://github.com/MrGunpreetSingh">MrGunpreetSingh</a></p>
-      <p>Phone: 506-897-3955</p>
-    </section>
+    </section><!-- /Hero Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Self-motivated, final-year student with strong knowledge of various programming languages, software, and platforms.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content">
+          <div class="col-lg-6">
+            <h4>Professional Skills</h4>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Strategic Problem-Solver</li>
+              <li><i class="bi bi-check-circle"></i> Agile Learner</li>
+              <li><i class="bi bi-check-circle"></i> Team Collaboration</li>
+              <li><i class="bi bi-check-circle"></i> Dynamic Presenter</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <h4>Programming Languages</h4>
+            <p>Java, Python, JavaScript, HTML, SQL, MATLAB, C++, C</p>
+            <h4>Technical Tools</h4>
+            <p>Data Structures and Algorithms, Managing Databases, Machine Learning, Microsoft Excel</p>
+            <h4>Operating Systems</h4>
+            <p>Windows, MacOS, Linux</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Skills Section -->
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Education</h2>
+        <p>Academic background and relevant coursework</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-12">
+            <h4>University of New Brunswick, Fredericton, NB</h4>
+            <p>Bachelor of Computer Science</p>
+            <p>Expected Graduation: December 2026</p>
+            <p>GPA: 3.1</p>
+            <h5>Relevant Coursework:</h5>
+            <p>Data Structures & Algorithms, Objects & Design, Computer Organization & Programming, Machine Learning, Object-Oriented Programming, Statistics & Applications</p>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Education Section -->
+
+    <!-- Experience Section -->
+    <section id="experience" class="section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Experience</h2>
+        <p>Professional work experience and responsibilities</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="experience-item mb-4">
+              <h4>Line Cook</h4>
+              <h5>Moco Downtown, Fredericton, NB</h5>
+              <p><em>April 2024 - Present</em></p>
+              <ul>
+                <li>Streamlined kitchen operations by leading a team of 5-6 staff during peak hours, ensuring efficient workflow and high-quality service.</li>
+                <li>Leveraged organizational tools and systems to manage inventory and prep schedules, reducing downtime and improving kitchen efficiency by 20%.</li>
+                <li>Maintained precise attention to detail in food preparation and presentation, reflecting commitment to quality and consistency.</li>
+              </ul>
+            </div>
+            
+            <div class="experience-item mb-4">
+              <h4>Private Tutor</h4>
+              <h5>UNB, Fredericton, NB</h5>
+              <p><em>January 2023 - Present</em></p>
+              <ul>
+                <li>Delivered tailored one-on-one instruction in mathematics and foundational Computer Science courses, focusing on algorithms, data structures, and problem-solving techniques.</li>
+                <li>Designed customized learning plans and innovative teaching strategies to simplify complex topics, empowering students to achieve academic excellence.</li>
+                <li>Cultivated a collaborative and engaging learning environment, resulting in significant improvements in student performance and confidence in technical subjects.</li>
+              </ul>
+            </div>
+            
+            <div class="experience-item">
+              <h4>Student Counselor, Faculty of Computer Science</h4>
+              <h5>UNB, Fredericton, NB</h5>
+              <p><em>January 2023 - April 2024</em></p>
+              <ul>
+                <li>Represented constituencies for the Faculty of Computer Science in all the major decisions of the UNB Student Union.</li>
+                <li>Contributed to union operations by budget planning and financial management.</li>
+                <li>Regularly connected with faculty for updates and coordinated student events.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Experience Section -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="portfolio section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Projects</h2>
+        <p>A selection of significant projects demonstrating my technical skills and problem-solving abilities.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-database"></i></div>
+            <div>
+              <h4 class="title">Query Processing on LLMs</h4>
+              <p class="description">Exploring the implementation of complex queries (range, aggregate, join, order-by) on Large Language Models like Gemma and Llama.</p>
+              <ul>
+                <li>Integrating Apache Calcite with LLMs to enable structured query processing on unstructured data.</li>
+                <li>Developing a simple prototype to demonstrate the feasibility of supporting advanced queries within LLMs.</li>
+                <li>Enhancing data manipulation capabilities of language models.</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-cash-coin"></i></div>
+            <div>
+              <h4 class="title">Family Financial Tracking System</h4>
+              <p class="description">Collaborated within a team to design and implement a comprehensive financial tracking system, leveraging Eclipse, C, and Java.</p>
+              <ul>
+                <li>Utilized Git and GitHub for version control and seamless collaboration.</li>
+                <li>Developed core features including expense categorization, budget tracking, and report generation.</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-globe"></i></div>
+            <div>
+              <h4 class="title">Personal Portfolio Website</h4>
+              <p class="description">Designed and developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills and projects.</p>
+              <ul>
+                <li>Created a clean and user-friendly interface.</li>
+                <li>Ensured responsive design across devices.</li>
+                <li>Optimized website performance.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Projects Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for professional opportunities or collaborations.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email</h3>
+                  <p>Q3y4a@unb.ca</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Phone</h3>
+                  <p>506-897-3955</p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-linkedin flex-shrink-0"></i>
+                <div>
+                  <h3>LinkedIn</h3>
+                  <p><a href="https://www.linkedin.com/in/gunpreet-singh-/">linkedin.com/in/gunpreet-singh-/</a></p>
+                </div>
+              </div>
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+                <i class="bi bi-github flex-shrink-0"></i>
+                <div>
+                  <h3>GitHub</h3>
+                  <p><a href="https://github.com/MrGunpreetSingh">MrGunpreetSingh</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
   </main>
 
-  <footer id="footer" class="footer light-background">
-    <div class="container text-center">
-      <p>© Copyright Gunpreet Singh. All Rights Reserved</p>
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Gunpreet Singh</strong> <span>All Rights Reserved</span></p>
+      </div>
     </div>
+
   </footer>
 
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
