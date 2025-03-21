@@ -1,1 +1,2 @@
 This is my personal portfolio website project. I began working on it casually, but it has now become an area of great interest for me, and I continue to develop it regularly as I accomplish new things in school and life. So far, I've used HTML, incorporated images, and taken assistance from AI. The website is designed primarily for recruiters, allowing them to conveniently explore my profile and view my achievements.
+![Screenshot 2025-03-20 232938](https://github.com/user-attachments/assets/0bdc2946-9cc5-450e-83ca-cf149ec21c59)
