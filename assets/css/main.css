@@ -546,11 +546,12 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 80px 0;
+  padding: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   overflow: hidden;
+  background: #040b14;
 }
 
 .hero img,
@@ -561,46 +562,60 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 72% 35%;
+  object-position: center center;
   z-index: 1;
 }
 
 .hero:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 70%);
+  content: none;
+}
+
+/* Keep photo + overlay in the same 16:9 space so screen % stay accurate */
+.hero.hero-coding .hero-frame {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: min(100%, calc(100vh * 16 / 9));
+  height: min(100%, calc(100vw * 9 / 16));
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.hero.hero-coding .hero-frame .hero-photo {
   position: absolute;
   inset: 0;
-  z-index: 2;
-}
-
-.hero.hero-coding:before {
-  background:
-    linear-gradient(90deg, rgba(4, 11, 20, 0.78) 0%, rgba(4, 11, 20, 0.45) 38%, rgba(4, 11, 20, 0.12) 68%, rgba(4, 11, 20, 0.2) 100%);
-  pointer-events: none;
-}
-
-.hero .container,
-.hero .hero-layout {
-  position: relative;
-  z-index: 3;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
 
-.hero.hero-coding .hero-layout {
+/* Measured against hero-coding.jpg (1280x720) laptop LCD, shifted right */
+.hero.hero-coding .hero-screen-fit {
+  position: absolute;
+  z-index: 3;
+  left: 58.8%;
+  top: 53.6%;
+  width: 24.6%;
+  height: 18.8%;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  transform: perspective(1400px) rotateY(-11deg) rotateX(6deg) rotateZ(-1deg);
+  transform-origin: 20% 60%;
 }
 
 .hero-mac-terminal {
-  width: min(100%, 520px);
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 12px;
+  border-radius: 2px;
   overflow: hidden;
-  background: #1e1e1e;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.4);
+  background: rgba(8, 8, 10, 0.96);
+  border: none;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 0 18px rgba(80, 180, 255, 0.08);
   font-family: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -608,8 +623,8 @@ section,
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 14px;
+  gap: 5px;
+  padding: 2px 5px;
   background: linear-gradient(180deg, #3a3a3c 0%, #2c2c2e 100%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.45);
 }
@@ -617,28 +632,32 @@ section,
 .hero-mac-title {
   flex: 1;
   text-align: center;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(0.34rem, 0.7vw, 0.55rem);
+  color: rgba(255, 255, 255, 0.75);
   letter-spacing: 0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 42px;
+  padding-right: 22px;
 }
 
 .hero-mac-body {
-  padding: 18px 18px 20px;
-  background: #0d0d0f;
+  flex: 1;
+  min-height: 0;
+  padding: 4px 6px 5px;
+  overflow: hidden;
+  background: #0a0a0c;
   color: #f5f5f7;
 }
 
 .hero-mac-line {
-  margin: 0 0 0.55em 0 !important;
-  font-size: 0.92rem !important;
-  line-height: 1.45;
+  margin: 0 0 0.15em 0 !important;
+  font-size: clamp(0.34rem, 0.68vw, 0.58rem) !important;
+  line-height: 1.28;
   letter-spacing: 0;
-  white-space: normal;
-  overflow: visible;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .hero-mac-dim {
@@ -661,28 +680,25 @@ section,
 .hero-mac-name {
   color: #ffffff !important;
   font-weight: 700;
-  font-size: 1.35rem !important;
-  margin-bottom: 0.7em !important;
+  font-size: clamp(0.45rem, 0.9vw, 0.78rem) !important;
 }
 
 .hero-mac-typed {
   color: #e8e8ed !important;
-  min-height: 1.6em;
-  font-size: 1.05rem !important;
+  white-space: normal !important;
+  min-height: 1.25em;
 }
 
 .hero-mac-typed span {
   letter-spacing: 0.02em;
-  border-bottom: 2px solid rgba(125, 207, 255, 0.75);
+  border-bottom: 1px solid rgba(125, 207, 255, 0.7);
 }
 
 .hero-mac-ready {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 0.35em;
-  margin-top: 0.35em !important;
-  margin-bottom: 0 !important;
+  gap: 0.3em;
+  margin-top: 0.1em !important;
 }
 
 .hero h2 {
@@ -703,13 +719,13 @@ section,
 
 .hero-laptop-chrome {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   flex-shrink: 0;
 }
 
 .hero-laptop-chrome span {
-  width: 11px;
-  height: 11px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #ff5f57;
   display: inline-block;
@@ -725,8 +741,8 @@ section,
 }
 
 .hero-laptop-cursor-block {
-  width: 0.55em;
-  height: 1.05em;
+  width: 0.5em;
+  height: 0.95em;
   background: #f5f5f7;
   display: inline-block;
   vertical-align: text-bottom;
@@ -763,11 +779,6 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding: 100px 0 40px;
-    align-items: flex-end;
-  }
-
   .hero h2 {
     font-size: 32px;
   }
@@ -776,39 +787,24 @@ section,
     font-size: 20px;
   }
 
-  .hero .hero-photo {
-    object-position: 78% 30%;
-  }
-
-  .hero.hero-coding:before {
-    background:
-      linear-gradient(180deg, rgba(4, 11, 20, 0.15) 0%, rgba(4, 11, 20, 0.55) 48%, rgba(4, 11, 20, 0.88) 100%);
-  }
-
-  .hero-mac-terminal {
+  .hero.hero-coding .hero-frame {
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    transform: none;
+    top: 0;
+    left: 0;
   }
 
-  .hero-mac-title {
-    font-size: 0.72rem;
-    padding-right: 28px;
+  .hero.hero-coding .hero-frame .hero-photo {
+    object-position: 70% 40%;
   }
 
-  .hero-mac-body {
-    padding: 14px 14px 16px;
-  }
-
-  .hero-mac-line {
-    font-size: 0.82rem !important;
-  }
-
-  .hero-mac-name {
-    font-size: 1.15rem !important;
-  }
-
-  .hero-mac-typed {
-    font-size: 0.95rem !important;
+  .hero.hero-coding .hero-screen-fit {
+    left: 56%;
+    top: 54%;
+    width: 30%;
+    height: 18%;
+    transform: perspective(1000px) rotateY(-9deg) rotateX(5deg);
   }
 }
 
