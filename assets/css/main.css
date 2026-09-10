@@ -591,17 +591,23 @@ section,
   object-position: center center;
 }
 
-/* Measured against hero-coding.jpg (1280x720) laptop LCD, shifted right */
+/* Measured against hero-coding.jpg laptop LCD — inset from bezels, tilted to screen */
 .hero.hero-coding .hero-screen-fit {
   position: absolute;
   z-index: 3;
-  left: 58.8%;
-  top: 53.6%;
-  width: 24.6%;
-  height: 18.8%;
+  left: 61.2%;
+  top: 55.4%;
+  width: 26.8%;
+  height: 20.2%;
   display: flex;
-  transform: perspective(1400px) rotateY(-11deg) rotateX(6deg) rotateZ(-1deg);
-  transform-origin: 20% 60%;
+  overflow: hidden;
+  border-radius: 3px;
+  transform: perspective(1100px) rotateY(-16deg) rotateX(9deg) rotateZ(-1.8deg) skewY(-0.6deg);
+  transform-origin: 15% 70%;
+  opacity: 0.92;
+  filter: blur(0.25px) contrast(0.98);
+  -webkit-mask-image: linear-gradient(#000 0%, #000 100%);
+  mask-image: linear-gradient(#000 0%, #000 100%);
 }
 
 .hero-mac-terminal {
@@ -611,11 +617,11 @@ section,
   flex-direction: column;
   border-radius: 2px;
   overflow: hidden;
-  background: rgba(8, 8, 10, 0.96);
+  background: rgba(6, 6, 8, 0.9);
   border: none;
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
-    inset 0 0 18px rgba(80, 180, 255, 0.08);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    inset 0 0 22px rgba(70, 160, 255, 0.07);
   font-family: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -800,11 +806,13 @@ section,
   }
 
   .hero.hero-coding .hero-screen-fit {
-    left: 56%;
-    top: 54%;
-    width: 30%;
-    height: 18%;
-    transform: perspective(1000px) rotateY(-9deg) rotateX(5deg);
+    left: 59.5%;
+    top: 55%;
+    width: 28%;
+    height: 19%;
+    transform: perspective(1000px) rotateY(-14deg) rotateX(8deg) rotateZ(-1.4deg);
+    opacity: 0.93;
+    filter: blur(0.2px);
   }
 }
 
