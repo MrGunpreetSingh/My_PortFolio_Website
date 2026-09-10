@@ -810,7 +810,7 @@ section,
 
   .hero.hero-coding .hero-screen-fit {
     left: 36.5%;
-    top: 59.1%;
+    top: 59%;
     width: 27.2%;
     height: 18.4%;
     transform: none;
@@ -1478,4 +1478,77 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
+}
+
+/*--------------------------------------------------------------
+# Experience toggles
+--------------------------------------------------------------*/
+.experience-item {
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  padding-bottom: 0.75rem;
+}
+
+.experience-item:last-child {
+  border-bottom: none;
+}
+
+.experience-summary {
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 0.35rem 0;
+  user-select: none;
+}
+
+.experience-summary::-webkit-details-marker {
+  display: none;
+}
+
+.experience-heading h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.15rem;
+}
+
+.experience-heading h5 {
+  margin: 0 0 0.2rem 0;
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: color-mix(in srgb, var(--heading-color), transparent 15%);
+}
+
+.experience-heading p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.experience-arrow {
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  transition: transform 0.25s ease;
+}
+
+.experience-item[open] .experience-arrow {
+  transform: rotate(180deg);
+}
+
+.experience-details {
+  padding: 0.35rem 0 0.5rem 0;
+}
+
+.experience-details ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.experience-details li {
+  margin-bottom: 0.45rem;
+}
+
+.experience-summary:hover .experience-heading h4 {
+  color: var(--accent-color);
 }
