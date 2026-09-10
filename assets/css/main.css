@@ -546,21 +546,22 @@ section,
   width: 100%;
   min-height: 100vh;
   position: relative;
-  padding: 0;
+  padding: 80px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
 }
 
-.hero img {
+.hero img,
+.hero .hero-photo {
   position: absolute;
   inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 58% 42%;
+  object-position: 72% 35%;
   z-index: 1;
 }
 
@@ -573,52 +574,33 @@ section,
 }
 
 .hero.hero-coding:before {
-  background: linear-gradient(180deg, rgba(4, 11, 20, 0.04) 0%, rgba(4, 11, 20, 0.1) 100%);
+  background:
+    linear-gradient(90deg, rgba(4, 11, 20, 0.78) 0%, rgba(4, 11, 20, 0.45) 38%, rgba(4, 11, 20, 0.12) 68%, rgba(4, 11, 20, 0.2) 100%);
   pointer-events: none;
-  z-index: 2;
 }
 
-.hero .container {
+.hero .container,
+.hero .hero-layout {
   position: relative;
   z-index: 3;
+  width: 100%;
 }
 
-.hero.hero-coding .hero-stage {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-}
-
-.hero.hero-coding .hero-stage > img {
-  z-index: 1;
-  object-position: 58% 42%;
-}
-
-/* Sit flush on the blank MacBook LCD — tilted to match screen plane */
-.hero.hero-coding .hero-screen-fit {
-  position: absolute;
-  z-index: 4;
-  left: 56.2%;
-  top: 43.8%;
-  width: 23.8%;
-  height: 23.2%;
+.hero.hero-coding .hero-layout {
   display: flex;
-  padding: 0;
-  transform: perspective(1200px) rotateY(-18deg) rotateX(8deg) rotateZ(-2deg);
-  transform-origin: 0% 55%;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .hero-mac-terminal {
-  width: 100%;
-  height: 100%;
+  width: min(100%, 520px);
   display: flex;
   flex-direction: column;
-  border-radius: 3px;
+  border-radius: 12px;
   overflow: hidden;
-  background: #050507;
-  border: none;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  background: #1e1e1e;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.4);
   font-family: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -626,8 +608,8 @@ section,
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 3px 6px;
+  gap: 10px;
+  padding: 10px 14px;
   background: linear-gradient(180deg, #3a3a3c 0%, #2c2c2e 100%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.45);
 }
@@ -635,32 +617,28 @@ section,
 .hero-mac-title {
   flex: 1;
   text-align: center;
-  font-size: clamp(0.38rem, 0.65vw, 0.58rem);
-  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.78);
   letter-spacing: 0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 28px;
+  padding-right: 42px;
 }
 
 .hero-mac-body {
-  flex: 1;
-  min-height: 0;
-  padding: 5px 7px 6px;
-  overflow: hidden;
-  background: #050507;
+  padding: 18px 18px 20px;
+  background: #0d0d0f;
   color: #f5f5f7;
 }
 
 .hero-mac-line {
-  margin: 0 0 0.2em 0 !important;
-  font-size: clamp(0.4rem, 0.72vw, 0.68rem) !important;
-  line-height: 1.3;
+  margin: 0 0 0.55em 0 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.45;
   letter-spacing: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow: visible;
 }
 
 .hero-mac-dim {
@@ -683,25 +661,28 @@ section,
 .hero-mac-name {
   color: #ffffff !important;
   font-weight: 700;
-  font-size: clamp(0.5rem, 0.9vw, 0.82rem) !important;
+  font-size: 1.35rem !important;
+  margin-bottom: 0.7em !important;
 }
 
 .hero-mac-typed {
   color: #e8e8ed !important;
-  white-space: normal !important;
-  min-height: 1.35em;
+  min-height: 1.6em;
+  font-size: 1.05rem !important;
 }
 
 .hero-mac-typed span {
   letter-spacing: 0.02em;
-  border-bottom: 1px solid rgba(125, 207, 255, 0.7);
+  border-bottom: 2px solid rgba(125, 207, 255, 0.75);
 }
 
 .hero-mac-ready {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.35em;
-  margin-top: 0.15em !important;
+  margin-top: 0.35em !important;
+  margin-bottom: 0 !important;
 }
 
 .hero h2 {
@@ -722,13 +703,13 @@ section,
 
 .hero-laptop-chrome {
   display: flex;
-  gap: 4px;
+  gap: 6px;
   flex-shrink: 0;
 }
 
 .hero-laptop-chrome span {
-  width: 6px;
-  height: 6px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
   background: #ff5f57;
   display: inline-block;
@@ -745,7 +726,7 @@ section,
 
 .hero-laptop-cursor-block {
   width: 0.55em;
-  height: 1em;
+  height: 1.05em;
   background: #f5f5f7;
   display: inline-block;
   vertical-align: text-bottom;
@@ -781,18 +762,12 @@ section,
   color: var(--accent-color);
 }
 
-@media (max-width: 1199px) {
-  .hero.hero-coding .hero-screen-fit {
-    left: 54%;
-    top: 44%;
-    width: 28%;
-    height: 24%;
-    transform: perspective(1100px) rotateY(-16deg) rotateX(7deg) rotateZ(-1.5deg);
-    transform-origin: 0% 55%;
-  }
-}
-
 @media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 40px;
+    align-items: flex-end;
+  }
+
   .hero h2 {
     font-size: 32px;
   }
@@ -801,44 +776,39 @@ section,
     font-size: 20px;
   }
 
-  .hero.hero-coding .hero-stage > img {
-    object-position: 70% 40%;
-  }
-
-  .hero.hero-coding .hero-screen-fit {
-    left: 52%;
-    top: 46%;
-    width: 36%;
-    height: 22%;
-    transform: perspective(900px) rotateY(-14deg) rotateX(6deg) rotateZ(-1deg);
-    transform-origin: 0% 50%;
-    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
-  }
-
-  .hero-mac-terminal {
-    border-radius: 2px;
-  }
-
-  .hero-mac-title {
-    font-size: 0.42rem;
-    padding-right: 18px;
-  }
-
-  .hero-mac-body {
-    padding: 4px 6px 5px;
-  }
-
-  .hero-mac-line {
-    font-size: 0.42rem !important;
-    margin-bottom: 0.15em !important;
-  }
-
-  .hero-mac-name {
-    font-size: 0.5rem !important;
+  .hero .hero-photo {
+    object-position: 78% 30%;
   }
 
   .hero.hero-coding:before {
-    background: linear-gradient(180deg, rgba(4, 11, 20, 0.06) 0%, rgba(4, 11, 20, 0.2) 100%);
+    background:
+      linear-gradient(180deg, rgba(4, 11, 20, 0.15) 0%, rgba(4, 11, 20, 0.55) 48%, rgba(4, 11, 20, 0.88) 100%);
+  }
+
+  .hero-mac-terminal {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .hero-mac-title {
+    font-size: 0.72rem;
+    padding-right: 28px;
+  }
+
+  .hero-mac-body {
+    padding: 14px 14px 16px;
+  }
+
+  .hero-mac-line {
+    font-size: 0.82rem !important;
+  }
+
+  .hero-mac-name {
+    font-size: 1.15rem !important;
+  }
+
+  .hero-mac-typed {
+    font-size: 0.95rem !important;
   }
 }
 
