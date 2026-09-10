@@ -596,7 +596,7 @@ section,
   position: absolute;
   z-index: 3;
   left: 36.65%;
-  top: 61.2%;
+  top: 59%;
   width: 26.9%;
   height: 18.35%;
   display: flex;
@@ -810,7 +810,7 @@ section,
 
   .hero.hero-coding .hero-screen-fit {
     left: 36.5%;
-    top: 61.1%;
+    top: 59.1%;
     width: 27.2%;
     height: 18.4%;
     transform: none;
