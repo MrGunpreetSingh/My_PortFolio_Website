@@ -560,7 +560,7 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 62% center;
+  object-position: 58% 42%;
   z-index: 1;
 }
 
@@ -573,8 +573,9 @@ section,
 }
 
 .hero.hero-coding:before {
-  background: linear-gradient(180deg, rgba(4, 11, 20, 0.05) 0%, rgba(4, 11, 20, 0.12) 100%);
+  background: linear-gradient(180deg, rgba(4, 11, 20, 0.04) 0%, rgba(4, 11, 20, 0.1) 100%);
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero .container {
@@ -585,24 +586,27 @@ section,
 .hero.hero-coding .hero-stage {
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 .hero.hero-coding .hero-stage > img {
   z-index: 1;
+  object-position: 58% 42%;
 }
 
-/* Aligns the terminal to the blank MacBook screen in the hero photo */
+/* Sit flush on the blank MacBook LCD — tilted to match screen plane */
 .hero.hero-coding .hero-screen-fit {
   position: absolute;
-  z-index: 3;
-  left: 49.5%;
-  top: 39.5%;
-  width: 29.5%;
-  height: 28.5%;
+  z-index: 4;
+  left: 56.2%;
+  top: 43.8%;
+  width: 23.8%;
+  height: 23.2%;
   display: flex;
-  transform: perspective(900px) rotateY(-6deg) rotateX(2deg);
-  transform-origin: center center;
+  padding: 0;
+  transform: perspective(1200px) rotateY(-18deg) rotateX(8deg) rotateZ(-2deg);
+  transform-origin: 0% 55%;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
 }
 
 .hero-mac-terminal {
@@ -610,13 +614,11 @@ section,
   height: 100%;
   display: flex;
   flex-direction: column;
-  border-radius: 8px;
+  border-radius: 3px;
   overflow: hidden;
-  background: #0b0b0d;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow:
-    0 10px 28px rgba(0, 0, 0, 0.35),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  background: #050507;
+  border: none;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
   font-family: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -624,8 +626,8 @@ section,
   flex: 0 0 auto;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 5px 8px;
+  gap: 6px;
+  padding: 3px 6px;
   background: linear-gradient(180deg, #3a3a3c 0%, #2c2c2e 100%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.45);
 }
@@ -633,30 +635,28 @@ section,
 .hero-mac-title {
   flex: 1;
   text-align: center;
-  font-size: clamp(0.45rem, 0.75vw, 0.7rem);
+  font-size: clamp(0.38rem, 0.65vw, 0.58rem);
   color: rgba(255, 255, 255, 0.72);
   letter-spacing: 0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 36px;
+  padding-right: 28px;
 }
 
 .hero-mac-body {
   flex: 1;
   min-height: 0;
-  padding: 7px 9px 8px;
+  padding: 5px 7px 6px;
   overflow: hidden;
-  background:
-    radial-gradient(120% 80% at 50% 0%, rgba(40, 40, 45, 0.55), transparent 55%),
-    #0b0b0d;
+  background: #050507;
   color: #f5f5f7;
 }
 
 .hero-mac-line {
-  margin: 0 0 0.28em 0 !important;
-  font-size: clamp(0.48rem, 0.85vw, 0.78rem) !important;
-  line-height: 1.35;
+  margin: 0 0 0.2em 0 !important;
+  font-size: clamp(0.4rem, 0.72vw, 0.68rem) !important;
+  line-height: 1.3;
   letter-spacing: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -683,7 +683,7 @@ section,
 .hero-mac-name {
   color: #ffffff !important;
   font-weight: 700;
-  font-size: clamp(0.62rem, 1.05vw, 0.95rem) !important;
+  font-size: clamp(0.5rem, 0.9vw, 0.82rem) !important;
 }
 
 .hero-mac-typed {
@@ -722,13 +722,13 @@ section,
 
 .hero-laptop-chrome {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   flex-shrink: 0;
 }
 
 .hero-laptop-chrome span {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #ff5f57;
   display: inline-block;
@@ -783,11 +783,12 @@ section,
 
 @media (max-width: 1199px) {
   .hero.hero-coding .hero-screen-fit {
-    left: 47%;
-    top: 40%;
-    width: 34%;
-    height: 27%;
-    transform: perspective(900px) rotateY(-4deg) rotateX(2deg);
+    left: 54%;
+    top: 44%;
+    width: 28%;
+    height: 24%;
+    transform: perspective(1100px) rotateY(-16deg) rotateX(7deg) rotateZ(-1.5deg);
+    transform-origin: 0% 55%;
   }
 }
 
@@ -801,45 +802,43 @@ section,
   }
 
   .hero.hero-coding .hero-stage > img {
-    object-position: 72% center;
+    object-position: 70% 40%;
   }
 
   .hero.hero-coding .hero-screen-fit {
-    left: 50%;
-    top: auto;
-    bottom: 8%;
-    width: min(88vw, 360px);
-    height: auto;
-    min-height: 150px;
-    transform: translateX(-50%);
+    left: 52%;
+    top: 46%;
+    width: 36%;
+    height: 22%;
+    transform: perspective(900px) rotateY(-14deg) rotateX(6deg) rotateZ(-1deg);
+    transform-origin: 0% 50%;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
   }
 
   .hero-mac-terminal {
-    height: auto;
-    min-height: 150px;
-    border-radius: 10px;
+    border-radius: 2px;
   }
 
   .hero-mac-title {
-    font-size: 0.68rem;
-    padding-right: 28px;
+    font-size: 0.42rem;
+    padding-right: 18px;
   }
 
   .hero-mac-body {
-    padding: 10px 12px 12px;
+    padding: 4px 6px 5px;
   }
 
   .hero-mac-line {
-    font-size: 0.72rem !important;
-    white-space: normal;
+    font-size: 0.42rem !important;
+    margin-bottom: 0.15em !important;
   }
 
   .hero-mac-name {
-    font-size: 0.95rem !important;
+    font-size: 0.5rem !important;
   }
 
   .hero.hero-coding:before {
-    background: linear-gradient(180deg, rgba(4, 11, 20, 0.08) 0%, rgba(4, 11, 20, 0.35) 100%);
+    background: linear-gradient(180deg, rgba(4, 11, 20, 0.06) 0%, rgba(4, 11, 20, 0.2) 100%);
   }
 }
 
