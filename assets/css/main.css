@@ -591,19 +591,19 @@ section,
   object-position: center center;
 }
 
-/* Front-facing Mac LCD — flat overlay (no heavy perspective) */
+/* Front-facing Mac LCD — fill the display like a real terminal */
 .hero.hero-coding .hero-screen-fit {
   position: absolute;
   z-index: 3;
-  left: 37.8%;
-  top: 64.5%;
-  width: 24.5%;
-  height: 16.1%;
+  left: 36.9%;
+  top: 63.7%;
+  width: 26.4%;
+  height: 17.8%;
   display: flex;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 4px;
   transform: none;
-  opacity: 0.96;
+  opacity: 1;
   filter: none;
 }
 
@@ -614,9 +614,9 @@ section,
   flex-direction: column;
   border-radius: 3px;
   overflow: hidden;
-  background: #0a0a0c;
+  background: #000000;
   border: none;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow: none;
   font-family: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
@@ -625,7 +625,7 @@ section,
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 2px 5px;
+  padding: 3px 6px;
   background: linear-gradient(180deg, #3a3a3c 0%, #2c2c2e 100%);
   border-bottom: 1px solid rgba(0, 0, 0, 0.45);
 }
@@ -633,28 +633,28 @@ section,
 .hero-mac-title {
   flex: 1;
   text-align: center;
-  font-size: clamp(0.34rem, 0.7vw, 0.55rem);
-  color: rgba(255, 255, 255, 0.75);
+  font-size: clamp(0.4rem, 0.85vw, 0.65rem);
+  color: rgba(255, 255, 255, 0.78);
   letter-spacing: 0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-right: 22px;
+  padding-right: 24px;
 }
 
 .hero-mac-body {
   flex: 1;
   min-height: 0;
-  padding: 4px 6px 5px;
+  padding: 6px 8px 7px;
   overflow: hidden;
-  background: #0a0a0c;
+  background: #000000;
   color: #f5f5f7;
 }
 
 .hero-mac-line {
-  margin: 0 0 0.15em 0 !important;
-  font-size: clamp(0.34rem, 0.68vw, 0.58rem) !important;
-  line-height: 1.28;
+  margin: 0 0 0.22em 0 !important;
+  font-size: clamp(0.42rem, 0.85vw, 0.72rem) !important;
+  line-height: 1.35;
   letter-spacing: 0;
   white-space: nowrap;
   overflow: hidden;
@@ -681,7 +681,7 @@ section,
 .hero-mac-name {
   color: #ffffff !important;
   font-weight: 700;
-  font-size: clamp(0.45rem, 0.9vw, 0.78rem) !important;
+  font-size: clamp(0.55rem, 1.05vw, 0.92rem) !important;
 }
 
 .hero-mac-typed {
@@ -801,12 +801,12 @@ section,
   }
 
   .hero.hero-coding .hero-screen-fit {
-    left: 36.5%;
+    left: 36.6%;
     top: 63.5%;
     width: 27%;
-    height: 16.5%;
+    height: 18%;
     transform: none;
-    opacity: 0.96;
+    opacity: 1;
     filter: none;
   }
 }
